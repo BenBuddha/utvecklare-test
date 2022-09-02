@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Manager</title>
+
+    <!-- React Development Build Imports, do not remove -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel development stand-alone compiler, do not remove -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Styling & Fonts -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+
+  <body>
+    <!-- everythign renders insdie the root div -->
+    <div id="root"></div>
+
+    <!-- everything is imported here, order matters -->
+    <script type="text/babel" src="./components/Sidebar.js"></script>
+    <script type="text/babel" src="./components/Navbar.js"></script>
+    <script type="text/babel" src="./components/SingleTask.js"></script>
+    <script type="text/babel" src="./components/SingleUser.js"></script>
+    <script type="text/babel" src="./components/CreateTask.js"></script>
+    <script type="text/babel" src="./components/CreateUser.js"></script>
+    <script type="text/babel" src="./components/UnAssigned.js"></script>
+    <script type="text/babel" src="./App.js"></script>
+    <script type="text/babel" src="./index.js"></script>
+  </body>
+</html>
