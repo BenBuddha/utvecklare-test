@@ -37,7 +37,7 @@ const App = () => {
     ]);
   }
 
-  // applicatioin's source of truth for tasks. laods data from locastorage
+  // applications source of truth for tasks. loads data from locastorage
   const [taskArray, setTaskArray] = React.useState(() =>
     loadFromLocalStorage("taskArray")
   );
@@ -63,14 +63,14 @@ const App = () => {
   const createTask = (title, desc, username = "") => {
     const newtask = { title, desc, username };
 
-    // finda the user with the given username.
-    const assginedUserIndex = userArray.findIndex(
+    // find a the user with the given username.
+    const assignedUserIndex = userArray.findIndex(
       (user) => user.username === username
     );
 
-    // if finda the user, then makes the unassgined flag false.
-    if (assginedUserIndex !== -1) {
-      userArray[assginedUserIndex].unassigned = false;
+    // if finda the user, then makes the unassigned flag false.
+    if (assignedUserIndex !== -1) {
+      userArray[assignedUserIndex].unassigned = false;
       setUserArray(userArray);
       storeToLocalStorage("userArray", [...userArray]);
     }
@@ -100,7 +100,7 @@ const App = () => {
     const deletedUser = taskArray[id];
     const newTaskArray = taskArray.filter((_, index) => id != index);
 
-    // finda the user with the given username.
+    // find a the user with the given username.
     const assginedUserIndex = userArray.findIndex(
       (user) => user.username === deletedUser.username
     );
